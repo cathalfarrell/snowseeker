@@ -38,6 +38,13 @@ struct ContentView: View {
                             .foregroundColor(.primary)
                         Text("\(resort.runs) runs")
                             .foregroundColor(.secondary)
+                    }.layoutPriority(1) //to stop wrapping
+
+                    if self.favourites.contains(resort) {
+                        Spacer()
+                        Image(systemName: "heart.fill")
+                            .accessibility(label: Text("This is a favourite resort"))
+                            .foregroundColor(.red)
                     }
                 }
                 .navigationBarTitle("Resorts")
