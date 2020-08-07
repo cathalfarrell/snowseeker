@@ -11,6 +11,7 @@ import SwiftUI
 struct ResortView: View {
 
     @Environment(\.horizontalSizeClass) var sizeClass
+    @EnvironmentObject var favourites: Favourites
 
     @State private var selectedFacility: Facility?
     

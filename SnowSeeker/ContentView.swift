@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
 
+    @ObservedObject var favourites = Favourites()
+
     let resorts: [Resort] = Bundle.main.decode("resorts.json")
 
     var body: some View {
@@ -45,6 +47,7 @@ struct ContentView: View {
             WelcomeView()
         }
         //.phoneOnlyStackNavigationView()
+        .environmentObject(favourites)
     }
 }
 

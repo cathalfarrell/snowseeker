@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C02400F24DD9B920025CB80 /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02400E24DD9B920025CB80 /* Facility.swift */; };
+		8C02401124DDA19F0025CB80 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C02401024DDA19F0025CB80 /* Favourites.swift */; };
 		8C31377024DC242C00DB54EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C31376F24DC242C00DB54EB /* AppDelegate.swift */; };
 		8C31377224DC242C00DB54EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C31377124DC242C00DB54EB /* SceneDelegate.swift */; };
 		8C31377524DC242C00DB54EB /* SnowSeeker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C31377324DC242C00DB54EB /* SnowSeeker.xcdatamodeld */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		8C02400E24DD9B920025CB80 /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
+		8C02401024DDA19F0025CB80 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
 		8C31376C24DC242C00DB54EB /* SnowSeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowSeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C31376F24DC242C00DB54EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C31377124DC242C00DB54EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				8C31378624DC723900DB54EB /* resorts.json */,
 				8C31378E24DC812700DB54EB /* ResortView.swift */,
+				8C02401024DDA19F0025CB80 /* Favourites.swift */,
 				8C31376F24DC242C00DB54EB /* AppDelegate.swift */,
 				8C31377124DC242C00DB54EB /* SceneDelegate.swift */,
 				8C31377624DC242C00DB54EB /* ContentView.swift */,
@@ -181,6 +184,7 @@
 				8C31377524DC242C00DB54EB /* SnowSeeker.xcdatamodeld in Sources */,
 				8C31377724DC242C00DB54EB /* ContentView.swift in Sources */,
 				8CECAD3E24DC84C7002E6E36 /* SkiDetailsView.swift in Sources */,
+				8C02401124DDA19F0025CB80 /* Favourites.swift in Sources */,
 				8C31377224DC242C00DB54EB /* SceneDelegate.swift in Sources */,
 				8C31378F24DC812700DB54EB /* ResortView.swift in Sources */,
 				8C31378B24DC76BF00DB54EB /* Bundle-Decodable.swift in Sources */,
