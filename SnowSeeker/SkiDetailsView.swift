@@ -12,10 +12,13 @@ struct SkiDetailsView: View {
 
     let resort: Resort
 
+    //NB: layout priority here means that the text gets priority over the spacer and so avoids horiztonal compression
+    
     var body: some View {
-        VStack {
-            Text("Elevation: \(resort.elevation)")
-            Text("Snow: \(resort.snowDepth)cm")
+        Group {
+            Text("Elevation: \(resort.elevation)").layoutPriority(1)
+            Spacer().frame(height: 0)
+            Text("Snow: \(resort.snowDepth)cm").layoutPriority(1)
         }
     }
 }

@@ -28,10 +28,13 @@ struct ResortDetailsView: View {
         String(repeating: "$", count: resort.price)
     }
 
+    //NB: layout priority here means that the text gets priority over the spacer and so avoids horiztonal compression
+
     var body: some View {
-        VStack {
-            Text("Size: \(size)")
-            Text("Price: \(price)")
+        Group {
+            Text("Size: \(size)").layoutPriority(1)
+            Spacer().frame(height: 0)
+            Text("Price: \(price)").layoutPriority(1)
         }
     }
 }
