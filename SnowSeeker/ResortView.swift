@@ -11,6 +11,8 @@ import SwiftUI
 struct ResortView: View {
 
     @Environment(\.horizontalSizeClass) var sizeClass
+
+    @State private var selectedFacility: String?
     
     let resort: Resort
 
@@ -41,15 +43,29 @@ struct ResortView: View {
                         .padding(.vertical)
                     Text("Facilities")
                         .font(.headline)
-                    //List formatter joins strings in a natural language way, i.e. ".., .., and .."
-                    Text(ListFormatter.localizedString(byJoining: resort.facilities))
+                    HStack {
+                        ForEach(resort.facilities) { facility in
+                            Facility.icon(for: facility)
+                                .font(.title)
+                                .onTapGesture {
+                                    self.selectedFacility = facility //<-triggers state change
+                            }
+                        }
+                    }
                     .padding(.vertical)
                 }
                 .padding(.horizontal)
             }
         }
         .navigationBarTitle(Text("\(resort.name), \(resort.country))"), displayMode: .inline)
+        .alert(item: $selectedFacility) { facility in
+            Facility.alert(for: facility)
+        }
     }
+}
+
+extension String: Identifiable {
+    public var id: String { self }
 }
 
 struct ResortView_Previews: PreviewProvider {
