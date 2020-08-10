@@ -8,6 +8,30 @@
 
 import SwiftUI
 
+/*
+    Challenge 1 - Add a photo credit over the ResortView image.
+    The data is already loaded from the JSON for this purpose,
+    so you just need to make it look good in the UI.
+*/
+
+struct ImageOverlay: View {
+
+    var accrediation: String
+
+    var body: some View {
+        ZStack {
+            Text("Credit: \(accrediation)")
+                .font(.callout)
+                .padding(6)
+                .foregroundColor(.white)
+        }
+        .background(Color.black)
+        .opacity(0.6)
+        //.cornerRadius(10.0)
+        .padding(6)
+    }
+}
+
 struct ResortView: View {
 
     @Environment(\.horizontalSizeClass) var sizeClass
@@ -23,6 +47,7 @@ struct ResortView: View {
                 Image(decorative: resort.id)
                 .resizable()
                 .scaledToFit()
+                .overlay(ImageOverlay(accrediation: resort.imageCredit), alignment: .bottomLeading)
 
                 Group {
                     HStack {
@@ -76,7 +101,7 @@ struct ResortView: View {
 
 struct ResortView_Previews: PreviewProvider {
     static var previews: some View {
-        //ResortView(resort: Resort.example)
-        ResortView(resort: Resort.allResorts[5])
+        ResortView(resort: Resort.example)
+        //ResortView(resort: Resort.allResorts[5])
     }
 }
